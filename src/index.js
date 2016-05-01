@@ -81,8 +81,8 @@ var questions = [
     {
         "What did the Declaration of Independence do?": [
             "announced our independence (from Great Britain)",
-            "declared our independence (from Great Britain)",
-            "said that the United States is free (from Great Britain)",
+            "seal a deal with the British",
+            "said that the United States is never free",
             "set people free"
         ]
     },
@@ -593,7 +593,7 @@ function handleGetHelpRequest(intent, session, callback) {
 function handleFinishSessionRequest(intent, session, callback) {
     // End the session with a "Good bye!" if the user wants to quit the game
     callback(session.attributes,
-        buildSpeechletResponseWithoutCard("Mother Forker! Try Again", "", true));
+        buildSpeechletResponseWithoutCard("Goodbye.", "", true));
 }
 
 function isAnswerSlotValid(intent) {
