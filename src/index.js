@@ -384,7 +384,7 @@ function onSessionEnded(sessionEndedRequest, session) {
 // ------- Skill specific business logic -------
 
 var ANSWER_COUNT = 4;
-var GAME_LENGTH = 3;
+var GAME_LENGTH = 5;
 var CARD_TITLE = "Citizenship Test Games"; // Be sure to change this for your skill.
 
 function getWelcomeResponse(callback) {
@@ -517,7 +517,7 @@ function handleAnswerRequest(intent, session, callback) {
             speechOutputAnalysis = "correct. ";
         } else {
             if (!userGaveUp) {
-                speechOutputAnalysis = "You are so wrong. Try again Dummy! "
+                speechOutputAnalysis = "wrong... I expected a better answer from a human. "
             }
             speechOutputAnalysis += "The correct answer is " + correctAnswerIndex + ": " + correctAnswerText + ". ";
         }
